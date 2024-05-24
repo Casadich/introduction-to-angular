@@ -2,23 +2,23 @@
   <header><img src="../assets/logo.svg" alt="fairhouse">Fairhouse</header>
   <!---<section>--->
    <div id="container"> 
-    <div id="item1">
+      <div id="item1">
     <!--app-housing-list></!--app-housing-list-->
-    <app-housing-list [locationList]="housingLocationList" (locationSelectedEvent)="updateSelectedLocation($event)">
+      <app-housing-list [locationList]="housingLocationList" (locationSelectedEvent)="updateSelectedLocation($event)">
 
-    </app-housing-list>
+      </app-housing-list>
   <!---</section>--->
-    </div>
-    <div id="item2">
+      </div>
+      <div id="item2">
   <!---<article>--->
-    <img [src]="selectedLocation?.photo">
-    <p>{{selectedLocation?.name}}</p>
-    <p>{{selectedLocation?.availableUnits}}</p>
-    <p>{{selectedLocation?.city}}, {{selectedLocation?.state}}</p>
-    <p>{{selectedLocation?.laundry ? "Has laundry" : "Does Not have laundry"}}</p>
-    <p>{{selectedLocation?.wifi ? "Has wifi" : "Does Not have wifi"}}</p>
+        <img [src]="selectedLocation?.photo">
+        <p>{{selectedLocation?.name}}</p>
+        <p>{{selectedLocation?.availableUnits}}</p>
+        <p>{{selectedLocation?.city}}, {{selectedLocation?.state}}</p>
+        <p>{{selectedLocation?.laundry ? "Has laundry" : "Does Not have laundry"}}</p>
+        <p>{{selectedLocation?.wifi ? "Has wifi" : "Does Not have wifi"}}</p>
   <!---</article>--->
-    </div>
+      </div>
     </div>
 
 </main>
