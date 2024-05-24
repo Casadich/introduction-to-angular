@@ -6,3 +6,21 @@ body, p, h1 {
     margin: 0;
     padding: 0;
 }
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#item1{
+    display: flex;
+    
+}
+
+#item2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}

@@ -1,19 +1,25 @@
 <main>
   <header><img src="../assets/logo.svg" alt="fairhouse">Fairhouse</header>
-  <section>
+  <!---<section>--->
+   <div id="container"> 
+    <div id="item1">
     <!--app-housing-list></!--app-housing-list-->
     <app-housing-list [locationList]="housingLocationList" (locationSelectedEvent)="updateSelectedLocation($event)">
 
     </app-housing-list>
-  </section>
-  <article>
+  <!---</section>--->
+    </div>
+    <div id="item2">
+  <!---<article>--->
     <img [src]="selectedLocation?.photo">
     <p>{{selectedLocation?.name}}</p>
     <p>{{selectedLocation?.availableUnits}}</p>
     <p>{{selectedLocation?.city}}, {{selectedLocation?.state}}</p>
     <p>{{selectedLocation?.laundry ? "Has laundry" : "Does Not have laundry"}}</p>
     <p>{{selectedLocation?.wifi ? "Has wifi" : "Does Not have wifi"}}</p>
-  </article>
+  <!---</article>--->
+    </div>
+    </div>
 
 </main>
 
