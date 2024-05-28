@@ -1,5 +1,5 @@
 
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { HousingLocation } from '../housing-location';
 
 @Component({
@@ -7,7 +7,7 @@ import { HousingLocation } from '../housing-location';
   templateUrl: './housing-list.component.html',
   styleUrls: ['./housing-list.component.css']
 })
-export class HousingListComponent implements OnInit {
+export class HousingListComponent implements OnInit, AfterViewInit {
 
   constructor() { }
   @Input() locationList: HousingLocation[] = [];
@@ -24,10 +24,25 @@ export class HousingListComponent implements OnInit {
           searchText.toLowerCase()
      ));
   }
+  @ViewChild("searchButton") searchButton?: ElementRef<HTMLButtonElement>;
+  ngAfterViewInit(): void {
+    // Verificar si el botón está inicializado
+    if (this.searchButton) {
+      console.log('searchButton have been initialized:', this.searchButton.nativeElement);
+    } else {
+      console.error('searchButton have not been initialized');
+    }
+  }
   selectHousingLocation(location: HousingLocation) {
     this.locationSelectedEvent.emit(location);
   }
+  
 
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.searchButton!.nativeElement.click();
+    }
+  }
 }
 
 
