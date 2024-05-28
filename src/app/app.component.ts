@@ -44,4 +44,8 @@ export class AppComponent {
   updateSelectedLocation(location: HousingLocation) {
     this.selectedLocation = location;
   } searchHousingLocations() { }  
+
+  goStart(){
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
 }

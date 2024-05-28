@@ -26,7 +26,7 @@ export class HousingListComponent implements OnInit, AfterViewInit {
   }
   @ViewChild("searchButton") searchButton?: ElementRef<HTMLButtonElement>;
   ngAfterViewInit(): void {
-    // Verificar si el botón está inicializado
+    
     if (this.searchButton) {
       console.log('searchButton have been initialized:', this.searchButton.nativeElement);
     } else {
