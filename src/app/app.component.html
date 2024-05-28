@@ -23,7 +23,7 @@
       </ng-container>
       </div>
     </div>
-    <button class="go-start" (click)="goStart()">Go Up</button>
+    <button *ngIf="isScrolled" class="go-start" (click)="goStart()">Go Up</button>
 
 </main>
 

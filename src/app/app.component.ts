@@ -1,5 +1,5 @@
 import { HousingLocation } from './housing-location'
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 
 @Component({
@@ -47,5 +47,12 @@ export class AppComponent {
 
   goStart(){
     window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  isScrolled = false;
+  
+  @HostListener("window:scroll", [])
+  onWindowScroll(){
+    this.isScrolled = window.scrollY > 300;
   }
 }

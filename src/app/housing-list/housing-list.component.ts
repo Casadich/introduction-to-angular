@@ -43,6 +43,8 @@ export class HousingListComponent implements OnInit, AfterViewInit {
       this.searchButton!.nativeElement.click();
     }
   }
+
+  
 }
 
 
